@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApplication
+namespace AleisterCrowley.Test
 {
     public class Program
     {

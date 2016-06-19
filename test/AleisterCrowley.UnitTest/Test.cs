@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace ConsoleApplication.Test
+namespace AleisterCrowley.Test
 {
     [TestFixture]
     public class ExcludedMiddleTests
@@ -9,6 +9,16 @@ namespace ConsoleApplication.Test
         public void CanShowEquality(bool value)
         {
             Assert.That(value, Is.EqualTo(true));
+        }
+    }
+
+    [TestFixture]
+    public class WizardTests
+    {
+        [TestCase]
+        public void CanCreateWizard()
+        {
+            WizardJourney wiz = new WizardJourney();
         }
     }
 }
