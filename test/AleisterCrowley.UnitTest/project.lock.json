@@ -2292,6 +2292,13 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "AleisterCrowley/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.0",
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.0.0"
+        }
       }
     }
   },
@@ -7183,11 +7190,15 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
       ]
+    },
+    "AleisterCrowley/1.0.0": {
+      "type": "project",
+      "path": "../../src/AleisterCrowley/project.json"
     }
   },
   "projectFileDependencyGroups": {
     "": [
-      "AleisterCrowley >= 1.0.0.*",
+      "AleisterCrowley >= 1.0.0",
       "NUnit >= 3.2.1",
       "dotnet-test-nunit >= 3.4.0-alpha-2"
     ],

@@ -6,7 +6,8 @@ namespace AleisterCrowley
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            WizardJourney wiz = new WizardJourney();
+            wiz.doSomething();
         }
     }
 }
