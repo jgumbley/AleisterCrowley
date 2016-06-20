@@ -8,5 +8,14 @@ namespace AleisterCrowley
               Console.WriteLine("yo bizzle!");          
         }
 
+        public void nextStepInJourney() {
+            throw new EndOfWizardException();
+
+        }
+
+
+
     }
+
+    public class EndOfWizardException : System.Exception {}
 }

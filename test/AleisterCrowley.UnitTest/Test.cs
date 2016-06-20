@@ -3,16 +3,6 @@ using NUnit.Framework;
 namespace AleisterCrowley.Test
 {
     [TestFixture]
-    public class ExcludedMiddleTests
-    {
-        [TestCase(true)]
-        public void CanShowEquality(bool value)
-        {
-            Assert.That(value, Is.EqualTo(true));
-        }
-    }
-
-    [TestFixture]
     public class WizardTests
     {
         [TestCase]
@@ -20,5 +10,18 @@ namespace AleisterCrowley.Test
         {
             WizardJourney wiz = new WizardJourney();
         }
+
+        public void callNext(WizardJourney wiz) {
+            wiz.nextStepInJourney();
+        }
+
+        [TestCase]
+        public void EmptyWizard_EndOfWizardException()
+        {
+            // Given
+            WizardJourney wiz = new WizardJourney();
+            // When Then
+            Assert.Throws<EndOfWizardException>(delegate { wiz.nextStepInJourney(); });
+            }
     }
 }
