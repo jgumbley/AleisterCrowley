@@ -4,16 +4,21 @@ namespace AleisterCrowley
 {
     public class WizardJourney {
 
-        public void doSomething() {
-              Console.WriteLine("yo bizzle!");          
+        private WizardStep _step = null;
+
+        public WizardStep nextStepInJourney() {
+            if (_step == null) {
+                throw new EndOfWizardException();
+            }
+            return _step;
         }
 
-        public void nextStepInJourney() {
-            throw new EndOfWizardException();
-
+        public void addStep(WizardStep step) {
+            _step = step;
         }
+    }
 
-
+    public class WizardStep {
 
     }
 

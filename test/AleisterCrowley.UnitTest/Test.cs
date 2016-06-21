@@ -15,5 +15,18 @@ namespace AleisterCrowley.Test
                 wiz.nextStepInJourney(); 
                 });
         }
+
+        [TestCase]
+        public void OneStepWizard_GetNext()
+        {
+            // Given
+            WizardJourney wiz = new WizardJourney();
+            // When 
+            WizardStep step = new WizardStep();
+            wiz.addStep(step);
+            
+            // Then
+            Assert.That(wiz.nextStepInJourney(), Is.EqualTo(step)); 
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace AleisterCrowley
         public static void Main(string[] args)
         {
             WizardJourney wiz = new WizardJourney();
-            wiz.doSomething();
+
         }
     }
 }
